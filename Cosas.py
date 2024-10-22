@@ -74,3 +74,13 @@ plt.imshow(bordes_rgb, cmap='gray')
 plt.title('Bordes RGB')
 plt.show()
 
+ir_image_celsius = (ir_image * 0.04) - 273.15
+
+plt.figure(figsize=(8, 6))
+plt.imshow(ir_image_celsius, cmap='viridis')
+cbar = plt.colorbar()
+cbar.set_label('Temperatura (°C)', rotation=270, labelpad=15)
+plt.axis('off')
+
+plt.savefig('thermograma_con_barra.png', bbox_inches='tight', pad_inches=0)
+plt.close()
