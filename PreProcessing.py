@@ -6,9 +6,12 @@ gray_image = cv2.cvtColor(imagen_rgb, cv2.COLOR_BGR2GRAY)
 box_blur = cv2.blur(gray_image,(4,4))
 gaussian = cv2.GaussianBlur(gray_image,(7,7),0)
 
+new_imagergb = imagen_rgb.copy()
+cv2.imshow('imagen',new_imagergb) # nueva imagen para el recorte
+
 _,threshold_image = cv2.threshold(gaussian, 180, 255, cv2.THRESH_BINARY)
 contorno,_ = cv2.findContours(threshold_image, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
-contornos_dibujados = cv2.drawContours(imagen_rgb,contorno,-1,(0,255,0),3)
+contornos_dibujados = cv2.drawContours(imagen_rgb,contorno,-1,(0,255,0),3)  # crear los contornos en imagen rgb
 
 # Ordenar los contornos por área para seleccionar los paneles más grandes
 contours = sorted(contorno, key=cv2.contourArea, reverse=True)
@@ -22,7 +25,7 @@ for i in range(2):
     x, y, w, h = cv2.boundingRect(contours[i])
     
     # Recortar la imagen usando las coordenadas del rectángulo
-    panel_crop = imagen_rgb[y:y+h, x:x+w]
+    panel_crop = new_imagergb[y:y+h, x:x+w] # se usa la nueva imagen para recortar 
     panel_crops.append(panel_crop)
     
     # Guardar cada recorte individualmente
