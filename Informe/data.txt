@@ -1,0 +1,5 @@
+campo_solar.png
+panel_11.png;Guano
+panel_26.png;Fisica
+panel_39.png;Sombra
+panel_44.png;Electrica
