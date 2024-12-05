@@ -1,7 +1,7 @@
 # **ELO-328: Detección de Daños en Paneles Solares a través del Procesamiento Digital de Imágenes Aéreas RGB e IR**
 
-## **Demos y Modelos (.ht) Disponibles**
-Las demos y modelos entrenados (h.5) se encuentran disponibles en el Onedrive.
+## **Demos y Modelos (.h5) Disponibles**
+Las demos y modelos entrenados (.h5) se encuentran disponibles en el Onedrive.
 
 [Acceso al Onedrive](https://usmcl-my.sharepoint.com/:f:/g/personal/victor_munozs_usm_cl/ErIfns28g4hNiCxWcBhEl-wB8s4wONmhEIPHAOikkz4ORg?e=OyUMKX)
 
