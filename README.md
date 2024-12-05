@@ -23,7 +23,7 @@ Las demos se encuentran disponibles en el Onedrive.
 1. **Descargar el repositorio desde GitHub**:  
    Clonar el repositorio con:
    ```bash
-   git clone <URL_DEL_REPOSITORIO>
+   git clone <https://github.com/Zenjou/PDI.git>
    ```
 
 2. **Descargar los modelos desde el Onedrive**:  
