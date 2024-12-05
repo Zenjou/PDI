@@ -1,7 +1,7 @@
 # **ELO-328: Detección de Daños en Paneles Solares a través del Procesamiento Digital de Imágenes Aéreas RGB e IR**
 
 ## **Demos Disponibles**
-Las demos se encuentran disponibles en el Onedrive. 
+Las demos se encuentran disponibles en el Onedrive.
 
 [Acceso al Onedrive](https://usmcl-my.sharepoint.com/:f:/g/personal/victor_munozs_usm_cl/ErIfns28g4hNiCxWcBhEl-wB8s4wONmhEIPHAOikkz4ORg?e=OyUMKX)
 
@@ -20,28 +20,28 @@ Las demos se encuentran disponibles en el Onedrive.
 ---
 
 ### **Instalación**
-1. **Descargar el repositorio desde GitHub**:  
+1. **Descargar el repositorio desde GitHub**:
    Clonar el repositorio con:
    ```bash
    git clone https://github.com/Zenjou/PDI.git
    ```
 
-2. **Descargar los modelos desde el Onedrive**:  
+2. **Descargar los modelos desde el Onedrive**:
    Los modelos necesarios están disponibles en el Onedrive.
 
-3. **Instalación de dependencias**:  
+3. **Instalación de dependencias**:
    Asegurarse de instalar las bibliotecas requeridas (detalladas en el archivo `requirements.txt` del repositorio).
 
 ---
 
 ## **Datasets necesarios**
-- **Dataset de imágenes IR (entrenamiento CNN)**:  
+- **Dataset de imágenes IR (entrenamiento CNN)**:
   [Infrared Solar Modules - Raptor Maps](https://github.com/RaptorMaps/InfraredSolarModules)
-  
-- **Dataset de imágenes RGB (entrenamiento CNN)**:  
+
+- **Dataset de imágenes RGB (entrenamiento CNN)**:
   [Solar Panel Images - Kaggle](https://www.kaggle.com/datasets/pythonafroz/solar-panel-images)
-  
-- **Dataset de imágenes RGB e IR (preprocesamiento)**:  
+
+- **Dataset de imágenes RGB e IR (preprocesamiento)**:
   [Photovoltaic System Inspection - Kaggle](https://www.kaggle.com/datasets/marcosgabriel/photovoltaic-system-o-and-m-inspection)
 
 ---
@@ -53,24 +53,24 @@ Debido a que los módulos no están integrados, deben ejecutarse de forma separa
 
 #### **Carpetas con los códigos correspondientes:**
 
-- **Preprocesamiento IR**:  
+- **Preprocesamiento IR**:
   Encargado de recortar las imágenes IR que recibe.
   - `PreProcesamiento-IR.py`
-  
-- **Preprocesamiento RGB**:  
+
+- **Preprocesamiento RGB**:
   Encargado de recortar las imágenes RGB que recibe.
   - `PreProcesamiento-RGB.py`
 
-- **CNN RGB**:  
+- **CNN RGB**:
   Carpeta con todo lo relacionado al entrenamiento y evaluación del modelo de clasificación con imágenes RGB:
   - `VGG16-Solar-Panel-fault-detection.ipynb`: Código de entrenamiento del modelo.
   - `predict_solar_panel.py`: Código para realizar pruebas con el modelo entrenado.
 
-- **CNN IR**:  
+- **CNN IR**:
   Carpeta con todo lo relacionado al entrenamiento y evaluación del modelo de clasificación con imágenes IR:
   - `Resnet-50S-Solar-Panel-fault-detection.py`: Código de entrenamiento y pruebas del modelo entrenado.
 
-- **Generador de informes**:  
+- **Generador de informes**:
   Genera un informe en formato PDF basado en un archivo `.txt`:
   - `Informe.py`: Código para generar el informe en PDF.
 
